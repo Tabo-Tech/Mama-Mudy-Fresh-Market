@@ -45,14 +45,18 @@ section {
 }
 
 .product {
+    display:flex;
+    justify-content: center;
+    gap: 10px;
     text-align: center;
     margin: 20px 0;
 }
 
 .product img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 10px;
+    width: 200px;
+    height: auto;
+    max-width: 200px;
+    border-radius: 5px;
     box-shadow: 0px 0px 5px gray;
 }
 
@@ -86,3 +90,31 @@ iframe {
     border-radius: 10px;
     box-shadow: 0px 0px 10px gray;
 }
+.lightbox {
+    display: none; /* Hidden default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding-top: 50px;
+}
+
+.lightbox img {
+    max-width: 80%;
+    max-height: 80vh;
+    border-radius: 5px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
