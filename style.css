@@ -1,3 +1,4 @@
+/* Muonekano wa Kawaida kwa PC na Simu */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,6 +6,7 @@ body {
     background-color: #f4f4f4;
 }
 
+/* HEADER */
 header {
     background-color: green;
     color: white;
@@ -12,30 +14,43 @@ header {
     padding: 20px;
 }
 
+/* NAVIGATION */
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    padding: 10px 15px;
 }
 
+nav ul li a:hover {
+    background-color: white;
+    color: green;
+    border-radius: 5px;
+}
+
+/* SECTIONS */
 section {
     padding: 20px;
     background: white;
-    margin: 20px;
+    margin: 20px auto;
     border-radius: 10px;
     box-shadow: 0px 0px 10px gray;
+    max-width: 90%;
 }
 
+/* PICHA KUBWA KWENYE SECTIONS */
 .section-image {
     width: 100%;
     max-width: 600px;
@@ -44,10 +59,12 @@ section {
     border-radius: 10px;
 }
 
+/* BIDHAA */
 .product {
-    display:flex;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
     text-align: center;
     margin: 20px 0;
 }
@@ -58,17 +75,14 @@ section {
     max-width: 200px;
     border-radius: 5px;
     box-shadow: 0px 0px 5px gray;
+    transition: transform 0.3s ease;
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    background: green;
-    color: white;
-    margin-top: 20px;
+.product img:hover {
+    transform: scale(1.1);
 }
 
-/* Button ya kupiga simu */
+/* BUTTON YA KUPIGA SIMU */
 .call-button {
     display: inline-block;
     background-color: #28a745;
@@ -85,13 +99,29 @@ footer {
     background-color: #218838;
 }
 
-/* Muonekano wa ramani */
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: green;
+    color: white;
+    margin-top: 20px;
+}
+
+/* RAMANI */
 iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    display: block;
+    margin: 10px auto;
     border-radius: 10px;
     box-shadow: 0px 0px 10px gray;
 }
+
+/* LIGHTBOX (Zoom ya Picha) */
 .lightbox {
-    display: none; /* Hidden default */
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -104,8 +134,8 @@ iframe {
 }
 
 .lightbox img {
-    max-width: 80%;
-    max-height: 80vh;
+    max-width: 90%;
+    max-height: 90vh;
     border-radius: 5px;
 }
 
@@ -118,3 +148,26 @@ iframe {
     cursor: pointer;
 }
 
+/* ✅ MOBILE RESPONSIVE (Simu ndogo) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        flex-direction: column;
+    }
+
+    .product img {
+        max-width: 90%;
+    }
+
+    .section-image {
+        max-width: 90%;
+    }
+
+    iframe {
+        max-width: 90%;
+    }
+}
