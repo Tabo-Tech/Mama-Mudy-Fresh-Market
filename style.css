@@ -71,7 +71,7 @@ section {
 /* BIDHAA */
 .product {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Picha mbili kwa mstari */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Badilisha column size */
     gap: 15px;
     justify-content: center;
     text-align: center;
@@ -157,7 +157,7 @@ iframe {
     cursor: pointer;
 }
 
-/* ✅ MOBILE RESPONSIVE (Simu ndogo) */
+/* ✅ MOBILE RESPONSIVE */
 @media (max-width: 768px) {
     nav ul {
         flex-wrap: wrap;
@@ -165,7 +165,7 @@ iframe {
     }
 
     .product {
-        grid-template-columns: repeat(2, 1fr); /* Picha 2 kwa mstari kwenye simu */
+        grid-template-columns: repeat(2, 1fr); /* Picha 2 kwa mstari kwenye simu kubwa */
     }
 }
 
