@@ -20,6 +20,7 @@ header {
 
 /* NAVIGATION BAR */
 nav {
+    text-align:right;
     background-color: darkgreen;
     padding: 10px;
 }
